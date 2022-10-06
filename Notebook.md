@@ -20,5 +20,24 @@ Ans: Gradient decent is the machine learning algorithm you can use when there is
  Ans: The Stochastic Gradient Descent will reach the fastest since you are using one random training data at each iteration. However, the Batch Gradient Descent is the only one to actually converge. You cannot make the others converge; they will only approach close to the global minimum.
  8. Suppose you are using Polynomial Regression. You plot the learning curves and you notice that there is a large gap between the training error and the validation error. What is happening? What are three ways to solve this?
   Ans: The model is overfitting the data. To avoid overfitting the data, you can  regularize the model using Lasso or Ridge regression,or reduce the complexity of the model (degree of freedom)
-9. 
+9. Suppose you are using Ridge Regression and you notice that the training error and the validation error are almost equal and fairly high. Would you say that the model suffers from high bias or high variance? Should you increase the regularization hyperparameter alpha or reduce it?
+  Ans: The model suffers from high bias, the is under fitting. To treat high bias, reduce the regularization hyper parameter
+10. Why would you want to use:
 
+- Ridge Regression instead of plain Linear Regression?
+
+- Ridge Regression instead of plain Linear Regression?
+
+    *Ridge Regression regularizes the Linear Regression, to avoid overfitting.*
+
+  - Lasso instead of Ridge Regression?
+
+    *Lasso, which uses L1 norm regularization, automatically eliminates the weights of the least important features and therefore performs feature selection.*
+
+  - Elastic Net instead of Lasso?
+
+    *Elastic Net is preferred over Lasso if there are lots of features or lots of strongly correlated features.*
+
+11. Suppose you want to classify pictures as outdoor/indoor and daytime/nighttime. Should you implement two Logistic Regression classifier or one Softmax Regression classifier?
+
+    Ans- You should implement two Logistic Regression classifiers, because there are two different binary classifying (outdoor vs indoor, daytime/nighttime). All pictures can be one from each classifier. Softmax Regression classifies into only one class out of all of them.*
